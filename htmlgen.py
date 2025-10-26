@@ -52,10 +52,13 @@ class Section(HTML):
     code = ""
     for b in codeblocks:
       code += "\nreset()\n" + "\n".join(b.content) + "\n"
-      exec(code, {"print": _print, "reset": reset_output})
-      if output: b.output = output
-      output = []
-    
+      try:
+        exec(code, {"print": _print, "reset": reset_output})
+        if output: b.output = output
+        output = []
+      except Exception as e:
+        print(f"Error: {e}")
+        print(code)
     
     super().__init__(h(title, 2), *self.blocks)
 
@@ -74,6 +77,25 @@ try:
       CodeBlock("y = 20"),
       CodeBlock("z = x + y"),
       CodeBlock("print(z)"),
+    ),
+    Section("IF ELSE",
+      "If else is used to control the flow of the program.",
+      CodeBlock(
+        "x = 10",
+        "if x > 10:",
+        "  print('x is greater than 10')",
+        "else:",
+        "  print('x is less than 10')",
+      ),
+      CodeBlock(
+        "x = 10",
+        "if x > 10:",
+        "  print('this will never print.')",
+        "  print('this will never print.')",
+        "print('this will always print.')",
+      ),
+      "The identation controls what is inside the if block.",
+      
     ),
     Section("Functions",
       "Functions are maybe the most important concept in programming.",
@@ -102,9 +124,42 @@ try:
         "",
         "print(add(10, 20))",
         ),
-      "This function takes two arguments, calls another function and then returns two values.",
-        
+      "This function takes two arguments, calls another function and then returns two values.",        
+    ),
+    Section("Objects",
+      "Objects are used to package values together.",
+      CodeBlock(
+        "class Person:",
+        "  x = 10",
+        "  y = 20",
+      ),
+      "This defines a class of Objects. Each one holds an x and y value.",
+      CodeBlock(
+        "p1 = Person()",
+        "p2 = Person()",
+      ),
+      "p1 and p2 are Objects of the Person class.",
+      CodeBlock(
+        "print(p1.x, p1.y)",
+      ),
+      "You can get and set the values of the Objects by using the . operator.",
+      CodeBlock(
+        "print(p1.x)",
+        "p1.x = 30",
+        "print(p1.x)",
+      )
+    ),
+    Section("While",
+      CodeBlock(
+        "x = 0",
+        "while x < 4:",
+        "  print(x)",
+        "  x = x + 1",
+      ),
+      "The while loop is like an if statement that keeps repeating.",
+      "this is used to repeat some statements many times.",
     )
+
   )
 
 except Exception as e:

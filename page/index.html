@@ -1,0 +1,95 @@
+
+  <html>
+  <body>
+  <p><p><h2>Hello World</h2>
+<p>the simplest python program creates a single line of output:</p>
+<pre style="background-color: #333;padding: 10px;border-radius: 5px;"><code><span style="color:#8af;"><span style="color: #555; padding-right: 10px;">1</span> print('Hello World') </span></code></pre><pre style='color:#8f8;padding:0; padding-left:10px;'>Hello World</pre>
+<p>The green text under the code is the output of the program.</p>
+<p>print is used to output text to the console.</p></p>
+<p><h2>Variables</h2>
+<p>Variables are used to store data.</p>
+<pre style="background-color: #333;padding: 10px;border-radius: 5px;"><code><span style="color:#8af;"><span style="color: #555; padding-right: 10px;">1</span> x = 10 </span></code></pre>
+<pre style="background-color: #333;padding: 10px;border-radius: 5px;"><code><span style="color:#8af;"><span style="color: #555; padding-right: 10px;">1</span> y = 20 </span></code></pre>
+<pre style="background-color: #333;padding: 10px;border-radius: 5px;"><code><span style="color:#8af;"><span style="color: #555; padding-right: 10px;">1</span> z = x + y </span></code></pre>
+<pre style="background-color: #333;padding: 10px;border-radius: 5px;"><code><span style="color:#8af;"><span style="color: #555; padding-right: 10px;">1</span> print(z) </span></code></pre><pre style='color:#8f8;padding:0; padding-left:10px;'>30</pre></p>
+<p><h2>IF ELSE</h2>
+<p>If else is used to control the flow of the program.</p>
+<pre style="background-color: #333;padding: 10px;border-radius: 5px;"><code><span style="color:#8af;"><span style="color: #555; padding-right: 10px;">1</span> x = 10 </span>
+<span style="color:#8af;"><span style="color: #555; padding-right: 10px;">2</span> if x > 10: </span>
+<span style="color:#8af;"><span style="color: #555; padding-right: 10px;">3</span>   print('x is greater than 10') </span>
+<span style="color:#8af;"><span style="color: #555; padding-right: 10px;">4</span> else: </span>
+<span style="color:#8af;"><span style="color: #555; padding-right: 10px;">5</span>   print('x is less than 10') </span></code></pre><pre style='color:#8f8;padding:0; padding-left:10px;'>x is less than 10</pre>
+<pre style="background-color: #333;padding: 10px;border-radius: 5px;"><code><span style="color:#8af;"><span style="color: #555; padding-right: 10px;">1</span> x = 10 </span>
+<span style="color:#8af;"><span style="color: #555; padding-right: 10px;">2</span> if x > 10: </span>
+<span style="color:#8af;"><span style="color: #555; padding-right: 10px;">3</span>   print('this will never print.') </span>
+<span style="color:#8af;"><span style="color: #555; padding-right: 10px;">4</span>   print('this will never print.') </span>
+<span style="color:#8af;"><span style="color: #555; padding-right: 10px;">5</span> print('this will always print.') </span></code></pre><pre style='color:#8f8;padding:0; padding-left:10px;'>this will always print.</pre>
+<p>The identation controls what is inside the if block.</p></p>
+<p><h2>Functions</h2>
+<p>Functions are maybe the most important concept in programming.</p>
+<p>used to package commands into a single name</p>
+<p>a math function f(x) = x + 1 looks like this in python:</p>
+<pre style="background-color: #333;padding: 10px;border-radius: 5px;"><code><span style="color:#8af;"><span style="color: #555; padding-right: 10px;">1</span> def f(x): </span>
+<span style="color:#8af;"><span style="color: #555; padding-right: 10px;">2</span>   return x + 1 </span></code></pre>
+<p>the return statement ends the function and returns the value to the caller.</p>
+<pre style="background-color: #333;padding: 10px;border-radius: 5px;"><code><span style="color:#8af;"><span style="color: #555; padding-right: 10px;">1</span> print(f(10)) </span>
+<span style="color:#8af;"><span style="color: #555; padding-right: 10px;">2</span> print(f(20)) </span></code></pre><pre style='color:#8f8;padding:0; padding-left:10px;'>11
+
+21</pre>
+<p>this is how we call a function with the argument 10 and 20.</p>
+<pre style="background-color: #333;padding: 10px;border-radius: 5px;"><code><span style="color:#8af;"><span style="color: #555; padding-right: 10px;">1</span> def g(x): </span>
+<span style="color:#8af;"><span style="color: #555; padding-right: 10px;">2</span>   a = 22 + x </span>
+<span style="color:#8af;"><span style="color: #555; padding-right: 10px;">3</span>   return x * a </span>
+<span style="color:#8af;"><span style="color: #555; padding-right: 10px;">4</span>  </span>
+<span style="color:#8af;"><span style="color: #555; padding-right: 10px;">5</span> print(g(10)) </span></code></pre><pre style='color:#8f8;padding:0; padding-left:10px;'>320</pre>
+<p>A function can have multiple lines.</p>
+<p>Identation defines what is inside the function.</p>
+<pre style="background-color: #333;padding: 10px;border-radius: 5px;"><code><span style="color:#8af;"><span style="color: #555; padding-right: 10px;">1</span> def add(x, y): </span>
+<span style="color:#8af;"><span style="color: #555; padding-right: 10px;">2</span>   a = x + y </span>
+<span style="color:#8af;"><span style="color: #555; padding-right: 10px;">3</span>   b = g(a) </span>
+<span style="color:#8af;"><span style="color: #555; padding-right: 10px;">4</span>   return a, b </span>
+<span style="color:#8af;"><span style="color: #555; padding-right: 10px;">5</span>  </span>
+<span style="color:#8af;"><span style="color: #555; padding-right: 10px;">6</span> print(add(10, 20)) </span></code></pre><pre style='color:#8f8;padding:0; padding-left:10px;'>(30, 1560)</pre>
+<p>This function takes two arguments, calls another function and then returns two values.</p></p>
+<p><h2>Objects</h2>
+<p>Objects are used to package values together.</p>
+<pre style="background-color: #333;padding: 10px;border-radius: 5px;"><code><span style="color:#8af;"><span style="color: #555; padding-right: 10px;">1</span> class Person: </span>
+<span style="color:#8af;"><span style="color: #555; padding-right: 10px;">2</span>   x = 10 </span>
+<span style="color:#8af;"><span style="color: #555; padding-right: 10px;">3</span>   y = 20 </span></code></pre>
+<p>This defines a class of Objects. Each one holds an x and y value.</p>
+<pre style="background-color: #333;padding: 10px;border-radius: 5px;"><code><span style="color:#8af;"><span style="color: #555; padding-right: 10px;">1</span> p1 = Person() </span>
+<span style="color:#8af;"><span style="color: #555; padding-right: 10px;">2</span> p2 = Person() </span></code></pre>
+<p>p1 and p2 are Objects of the Person class.</p>
+<pre style="background-color: #333;padding: 10px;border-radius: 5px;"><code><span style="color:#8af;"><span style="color: #555; padding-right: 10px;">1</span> print(p1.x, p1.y) </span></code></pre><pre style='color:#8f8;padding:0; padding-left:10px;'>10 20</pre>
+<p>You can get and set the values of the Objects by using the . operator.</p>
+<pre style="background-color: #333;padding: 10px;border-radius: 5px;"><code><span style="color:#8af;"><span style="color: #555; padding-right: 10px;">1</span> print(p1.x) </span>
+<span style="color:#8af;"><span style="color: #555; padding-right: 10px;">2</span> p1.x = 30 </span>
+<span style="color:#8af;"><span style="color: #555; padding-right: 10px;">3</span> print(p1.x) </span></code></pre><pre style='color:#8f8;padding:0; padding-left:10px;'>10
+
+30</pre></p>
+<p><h2>While</h2>
+<pre style="background-color: #333;padding: 10px;border-radius: 5px;"><code><span style="color:#8af;"><span style="color: #555; padding-right: 10px;">1</span> x = 0 </span>
+<span style="color:#8af;"><span style="color: #555; padding-right: 10px;">2</span> while x < 4: </span>
+<span style="color:#8af;"><span style="color: #555; padding-right: 10px;">3</span>   print(x) </span>
+<span style="color:#8af;"><span style="color: #555; padding-right: 10px;">4</span>   x = x + 1 </span></code></pre><pre style='color:#8f8;padding:0; padding-left:10px;'>0
+
+1
+
+2
+
+3</pre>
+<p>The while loop is like an if statement that keeps repeating.</p>
+<p>this is used to repeat some statements many times.</p></p></p>
+  <script>
+  </script>
+  <style>
+  body {
+    background-color: #000;
+    color: #fff;
+    padding: 5% 10%;
+    font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  </style>
+  </body>
+  </html>
+  
