@@ -1,7 +1,7 @@
 import http.server
 import os
 
-folder = os.path.join(os.path.dirname(__file__), "page")
+folder = os.path.join(os.path.dirname(__file__), "docs")
 
 os.makedirs(folder, exist_ok=True)
 
